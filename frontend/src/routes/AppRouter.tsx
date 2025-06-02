@@ -53,7 +53,10 @@ const App: React.FC = () => {
             path="/groups/:groupId/members"
             element={
               <PrivateRoute>
-                <GroupMembersPage />
+                  <GroupMembersPage
+                                    group={{ id: 1, name: "Example Group", ownerId: 1}}
+                                    onBack={() => console.log("Back button clicked")}
+                  />
               </PrivateRoute>
             }
           />
